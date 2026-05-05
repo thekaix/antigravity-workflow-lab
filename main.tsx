@@ -1,7 +1,10 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
+import App from './App' // <-- Asegúrate de que este archivo App.tsx exista
 import './index.css'
-import WorkflowAnimation from './components/ui/branding/WorkflowAnimation'
 
-const root = createRoot(document.getElementById('root')!)
-root.render(<WorkflowAnimation />)
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
